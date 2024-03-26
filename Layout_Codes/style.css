@@ -6,13 +6,13 @@
   font-family: "Poppins", sans-serif;
 }
 :root {
-  --white-color: #fff;
+  --white-color: #ffffff;
   --blue-color: #4070f4;
   --grey-color: #707070;
   --grey-color-light: #aaa;
 }
 body {
-  background-color: #e7f2fd;
+  background-color: rgb(209, 255, 255);
   transition: all 0.5s ease;
 }
 body.dark {
@@ -23,6 +23,57 @@ body.dark {
   --blue-color: #fff;
   --grey-color: #f2f2f2;
   --grey-color-light: #aaa;
+}
+.container{
+  margin: 80px 5px 5px 265px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.container .screen{
+  border: 4px solid var(--grey-color-light);
+  width: 100%;
+  height: 89vh;
+  padding: 4px;
+  background-color: #fff;
+}
+.container .nudge {
+  padding: 10px;
+}
+.container .nudge .nudge-sel{
+  border-bottom: 2px solid black;
+  height: 15%;
+  padding: 2% 38%;
+  text-align: center;
+}
+.container .nudge .nudge-sel .btn{
+  width: max-content;
+  height: max-content;
+  font-size: 25px;
+  border: 2px solid var(--grey-color-light);
+  border-radius: 15px;
+  padding: 1%;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.container .nudge .nudge-types{
+  padding-top: 20px;
+}
+.container .nudge .nudge-types .choose-nudge{
+  display: inline;
+  border-bottom: 2px dashed black;
+  padding: 5px;
+  align-items: center;
+  font-size: 25px;
+}
+.container .nudge .nudge-types .nudge-options{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 20px;
+  
+}
+.container .nudge .nudge-types .nudge-options .nudge-box{
+  text-align: center;
+  padding: 20px;
 }
 /* navbar */
 .navbar {
@@ -237,6 +288,8 @@ body.dark {
 #sidebarOpen {
   display: none;
 }
+  
+
 
 @media screen and (max-width: 768px) {
   #sidebarOpen {

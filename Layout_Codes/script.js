@@ -1,10 +1,12 @@
 const body = document.querySelector("body");
 const darkLight = document.querySelector("#darkLight");
 const sidebar = document.querySelector(".sidebar");
+const container = document.querySelector(".container");
 const submenuItems = document.querySelectorAll(".submenu_item");
 const sidebarOpen = document.querySelector("#sidebarOpen");
 const sidebarClose = document.querySelector(".collapse_sidebar");
 const sidebarExpand = document.querySelector(".expand_sidebar");
+
 sidebarOpen.addEventListener("click", () => sidebar.classList.toggle("close"));
 sidebarClose.addEventListener("click", () => {
   sidebar.classList.add("close", "hoverable");
