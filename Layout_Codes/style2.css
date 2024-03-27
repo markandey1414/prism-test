@@ -1,0 +1,21 @@
+.container .tooltip{
+    padding: 10px;
+}
+.container .tooltip h3{
+    padding-bottom: 30px;
+}
+.container .tooltip .tooltip-style{
+    border: 2px solid black;
+    width: max-content;
+    margin-left: 30px;
+    padding: 20px;
+}
+.container .tooltip .tooltip-style .fontStyleIcon {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .container .tooltip .tooltip-style .fontStyleIcon:hover {
+    color: blue; /* Change color on hover (optional) */
+}

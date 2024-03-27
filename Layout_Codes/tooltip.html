@@ -8,6 +8,7 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <title>Side Navigation Bar in HTML CSS JavaScript</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
 </head>
 
 <body>
@@ -164,8 +165,30 @@
                 App screen
             </a>
         </div>
+        <div class="tooltip">
+            <h3>Nudge Type : Tooltip</h3>
+            <div class="tooltip-style">
+                <div class="tooltip-msg">
+                    <label for="inputmsg" class="form-label">Message</label>
+                    <input type="text" class="form-control" id="inputmsg">
+                </div>
+                <div class="tooltip-font">
+                    <label for="fontFamily">Font Family:</label>
+                    <select id="fontFamily"></select>
+                </div>
+                <div>
+                    <label for="fontStyle">Font Style:</label>
+                    <div id="fontStyle">
+                        <span class="fontStyleIcon" data-style="bold">&#x1D5D;</span> <!-- B for Bold -->
+                        <span class="fontStyleIcon" data-style="italic">&#x1D6B;</span> <!-- I for Italic -->
+                        <span class="fontStyleIcon" data-style="underline">&#x1D4B;</span> <!-- U for Underline -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 
 </html>
