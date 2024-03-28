@@ -1,41 +1,20 @@
-const fontFamilySelect = document.getElementById('fontFamily');
-const fontStyleIcons = document.querySelectorAll('.fontStyleIcon');
-const contentDiv = document.getElementById('content');
+document.getElementById('applyStylesBtn').addEventListener('click', applyStyles);
 
-// Array of commonly available font families
-const fontFamilies = [
-  "Arial, sans-serif",
-  "Helvetica, sans-serif",
-  "Verdana, sans-serif",
-  "Georgia, serif",
-  "Times New Roman, serif",
-  "Courier New, monospace",
-  "Arial Black, sans-serif",
-  "Comic Sans MS, cursive",
-  // Add more fonts as needed
-];
+function applyStyles() {
+  var content = document.getElementById('content');
+  var fontFamily = document.getElementById('fontFamily').value;
+  var fontSize = document.getElementById('fontSize').value + 'px';
+  var bold = document.getElementById('boldCheckbox').checked ? 'bold' : 'normal';
+  var italic = document.getElementById('italicCheckbox').checked ? 'italic' : 'normal';
+  var underline = document.getElementById('underlineCheckbox').checked ? 'underline' : 'none';
+  var textColor = document.getElementById('textColor').value;
+  var bgColor = document.getElementById('bgColor').value;
 
-// Populate the font family dropdown
-fontFamilies.forEach(fontFamily => {
-  const option = document.createElement('option');
-  option.textContent = fontFamily;
-  option.value = fontFamily;
-  fontFamilySelect.appendChild(option);
-});
-
-fontStyleIcons.forEach(icon => {
-  icon.addEventListener('click', function() {
-    const selectedStyle = this.getAttribute('data-style');
-    applyFontStyle(selectedStyle);
-  });
-});
-
-function applyFontStyle(style) {
-  if (style === 'bold') {
-    contentDiv.style.fontWeight = contentDiv.style.fontWeight === 'bold' ? 'normal' : 'bold';
-  } else if (style === 'italic') {
-    contentDiv.style.fontStyle = contentDiv.style.fontStyle === 'italic' ? 'normal' : 'italic';
-  } else if (style === 'underline') {
-    contentDiv.style.textDecoration = contentDiv.style.textDecoration === 'underline' ? 'none' : 'underline';
-  }
+  content.style.fontFamily = fontFamily;
+  content.style.fontSize = fontSize;
+  content.style.fontWeight = bold;
+  content.style.fontStyle = italic;
+  content.style.textDecoration = underline;
+  content.style.color = textColor;
+  content.style.backgroundColor = bgColor;
 }

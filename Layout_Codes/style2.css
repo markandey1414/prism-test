@@ -16,6 +16,50 @@
     cursor: pointer;
   }
   
-  .container .tooltip .tooltip-style .fontStyleIcon:hover {
+.container .tooltip .tooltip-style .fontStyleIcon:hover {
     color: blue; /* Change color on hover (optional) */
 }
+
+#font-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .font-family,
+  .font-size,
+  .font-style {
+    margin-bottom: 10px;
+  }
+  
+  .font-family label,
+  .font-size label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .font-size select,
+  .font-family select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  .font-style {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .font-style button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .preview {
+    text-align: center;
+  }
